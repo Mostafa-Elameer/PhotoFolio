@@ -1,0 +1,268 @@
+/*====== globale ======  */
+
+@font-face {
+  font-family: globale;
+  src: url(../webfonts/Wellfleet-Regular.ttf);
+}
+
+body {
+  font-family: globale;
+  color: white;
+  background-color: black;
+}
+
+article h2 {
+  font-size: 40px;
+}
+
+/*====== img home ======  */
+
+.img-home .card .contint-card .layer-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.498);
+  opacity: 0;
+  transition: all 0.4s 0.2s;
+}
+
+.img-home .card .contint-card img {
+  transition: all 0.4s;
+}
+.img-home .card .contint-card:hover img {
+  transform: scale(1.1);
+}
+.img-home .card .contint-card:hover .layer-img {
+  opacity: 1;
+}
+
+.img-home .card .contint-card i:hover {
+  opacity: 1 !important;
+}
+.home .contint span {
+  animation: tracking-in-expand 2s infinite;
+}
+
+.img-home {
+  animation: scale-up-center 2s;
+}
+/*====  about ====  */
+section.about .div-img {
+  overflow: hidden;
+}
+section.about .div-img .layer {
+  width: 100%;
+  height: 100%;
+  background-color: #1987542c;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 1s;
+}
+
+section.about .div-img .layer:hover {
+  border-radius: 20px;
+  opacity: 1;
+}
+
+section.about .div-img .layer:hover i {
+  border: 2px solid white;
+  animation: bounce-in-top 1s;
+}
+
+section.about .div-img img {
+  transition: all 1s;
+}
+section.about .div-img:hover img {
+  transform: scale(1.1);
+}
+
+/* ====== services ======= */
+
+section.services .contint-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgba(94, 88, 88, 0.324);
+}
+
+section.services .contint-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #198754;
+  left: 0;
+  bottom: 100%;
+  transition: all 0.5s;
+  z-index: -1;
+}
+section.services .contint-card:hover i {
+  background-color: white !important;
+  color: #198754;
+  animation: bounce-in-top 1s infinite;
+  animation: bounce-in-top 1s;
+}
+section.services .contint-card:hover::after {
+  bottom: 0;
+}
+
+button:hover {
+  animation: heartbeat 2s infinite;
+}
+
+section.services .check span.price {
+  position: relative;
+}
+
+section.services .check span.price::after {
+  content: "";
+
+  position: absolute;
+  width: 200%;
+  height: 10%;
+  background-color: #198754;
+  top: 50%;
+  left: 120%;
+}
+
+/*==== CONTACT =====  */
+
+section.contact .card-icon i {
+  transition: all 0.5s;
+  background-color: #fffbfb24 !important;
+}
+section.contact .card-icon:hover i {
+  overflow: hidden;
+
+  animation: bounce-in-top 1s;
+  background-color: #198754 !important;
+  color: white !important;
+}
+
+.w-48 {
+  width: 49%;
+}
+section.contact textarea,
+section.contact input {
+  border: 0;
+  background-color: rgba(216, 213, 213, 0.174);
+}
+
+/* ==== animation ====== */
+@keyframes bounce-in-top {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/*  botmm */
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/*  animition  */
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
